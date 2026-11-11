@@ -48,4 +48,4 @@
   - Per-hour fatal counts too small (17–50) to compare single hours → grouped night (0–5) vs day
   - Night fatal rate 0.57% vs day 0.23%, ~2.5× (two-proportion z = 11.5, p < 0.001)
   - Night crashes: lower injury rate but higher fatal rate → fewer but deadlier
-- Next: Poisson check on daily fatal crash counts
+- Next: Poisson check on daily fatal crash counts.
