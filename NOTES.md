@@ -42,3 +42,10 @@
   - Holdout accuracy 99.93% (80/20 split, 204,502 known rows)
   - Filled 51,130 rows → missing borough 23.4% → 4.7% (rest have no coords)
   - New column borough_filled; original BOROUGH kept unchanged
+- Did: notebook 02, frequency + severity analysis
+  - Crashes fell ~11%, 2023 → 2025 (−5.5%, −6.3%)
+  - Peak 5 PM (~17,000), low 3 AM (~4,800), excluding 00:00 placeholders
+  - Per-hour fatal counts too small (17–50) to compare single hours → grouped night (0–5) vs day
+  - Night fatal rate 0.57% vs day 0.23%, ~2.5× (two-proportion z = 11.5, p < 0.001)
+  - Night crashes: lower injury rate but higher fatal rate → fewer but deadlier
+- Next: Poisson check on daily fatal crash counts
