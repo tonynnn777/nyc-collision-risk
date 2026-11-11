@@ -35,3 +35,10 @@
   - injury_crash (≥1 injured or killed): 118,128 (43%), used for hour/borough/factor breakdowns
   
 - Next: Recover Borough from latitude/longitude, then do frequency analysis
+
+### 2026-11-11
+- Did: recovered missing BOROUGH from lat/long with k-NN (k=3, sklearn)
+  - Removed 2,752 rows with (0,0) coords before training
+  - Holdout accuracy 99.93% (80/20 split, 204,502 known rows)
+  - Filled 51,130 rows → missing borough 23.4% → 4.7% (rest have no coords)
+  - New column borough_filled; original BOROUGH kept unchanged
