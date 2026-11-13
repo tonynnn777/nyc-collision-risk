@@ -49,3 +49,17 @@
   - Night fatal rate 0.57% vs day 0.23%, ~2.5× (two-proportion z = 11.5, p < 0.001)
   - Night crashes: lower injury rate but higher fatal rate → fewer but deadlier
 - Next: Poisson check on daily fatal crash counts.
+
+### 2026-11-13
+- Did: notebook 03, Poisson check on daily fatal crashes
+  - 1,096 days; mean 0.672, variance 0.684 (close, consistent with Poisson)
+  - Observed vs predicted: more 0-death days (575 vs 559.5) and 2-death days (152 vs 126.5),
+    fewer 1-death days (339 vs 376.2)
+  - Chi-square GOF (groups 0/1/2/3+, ddof=1): χ² = 9.69, p = 0.008 → reject Poisson
+  - Meaning: risk likely not constant day to day; plain Poisson underestimates bad days
+- Did: conditional fatal rates by who was hurt
+  - P(fatal | pedestrian hurt) 1.28%, cyclist 0.43%, motorist 0.45%
+  - Among injury crashes: pedestrian hurt vs not, 1.28% vs 0.43% (~3×), z = 15.6, p < 0.001
+  - Used ped_hurt vs not, since pedestrian vs motorist groups overlap (543 crashes)
+  - Data only records pedestrians if hurt, so this is "pedestrian hurt", not "involved"
+- Next: write README (Question → Data → Analysis → Findings → Recommendation), add charts
